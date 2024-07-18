@@ -17,9 +17,9 @@ class ViewController: UIViewController {
         
         // Please replace your APP_ID from https://appsonair.com
         // appUpdateManager.setAppId(APP_ID: "XXXXX-XXXX-XXXX-XXXX-XXXXXXXX", showNativeUI: true/false)
-        /*  let appId = appUpdateManager.getAppId()
+          /*let appId = appUpdateManager.getAppId()
          print(appId)
-         let  result = appUpdateManager.networkStatusDidChange()    */
+         let  result = appUpdateManager.networkStatusDidChange()*/
         // Do any additional setup after loading the view, typically from a nib.
     }
 

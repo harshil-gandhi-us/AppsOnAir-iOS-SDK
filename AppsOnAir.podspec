@@ -16,7 +16,8 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://doc.dev.appsonair.com/Mobile-Quickstart/ios-sdk-setup'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'devtools-logicwind' => 'devtools@logicwind.com' }
-  s.source           = { :git => 'https://github.com/apps-on-air/AppsOnAir-iOS-SDK.git', :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/harshil-gandhi-us/AppsOnAir-iOS-SDK.git", :branch => 'feature/appsonair_core'}
+  
 
   s.ios.deployment_target = '10.0'
   s.swift_version = '5.0'

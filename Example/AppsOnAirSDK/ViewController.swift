@@ -11,13 +11,15 @@ import AppsOnAir
 
 class ViewController: UIViewController {
 
+// let appUpdateManager = AppsOnAirServices()
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let appUpdateManager = AppsOnAirServices()
         // Please replace your APP_ID from https://appsonair.com
         // appUpdateManager.setAppId(APP_ID: "XXXXX-XXXX-XXXX-XXXX-XXXXXXXX", showNativeUI: true/false)
-        appUpdateManager.setAppId("XXXXX-XXXX-XXXX-XXXX-XXXXXXXX", true)
+        /*  let appId = appUpdateManager.getAppId()
+         print(appId)
+         let  result = appUpdateManager.networkStatusDidChange()    */
         // Do any additional setup after loading the view, typically from a nib.
     }
 

@@ -24,4 +24,7 @@ Pod::Spec.new do |s|
   s.source_files = 'AppsOnAirSDK/Classes/**/*'
   s.resources = ['AppsOnAirSDK/Assets/AppUpdate.storyboard']
   
+  s.dependency 'ReachabilitySwift'
+
+  
 end

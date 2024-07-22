@@ -1,16 +1,34 @@
 PODS:
-  - AppsOnAir (0.1.2)
+  - AppsOnAir (0.1.5):
+    - AppsOnAirIOSCore
+  - AppsOnAirIOSCore (0.1.0):
+    - ReachabilitySwift
+  - ReachabilitySwift (5.2.3)
 
 DEPENDENCIES:
   - AppsOnAir (from `../`)
+  - AppsOnAirIOSCore (from `https://github.com/harshil-gandhi-us/AppsOnAirIOSCore`)
+
+SPEC REPOS:
+  trunk:
+    - ReachabilitySwift
 
 EXTERNAL SOURCES:
   AppsOnAir:
     :path: "../"
+  AppsOnAirIOSCore:
+    :git: https://github.com/harshil-gandhi-us/AppsOnAirIOSCore
+
+CHECKOUT OPTIONS:
+  AppsOnAirIOSCore:
+    :commit: f057a7b773430ed1ef0bbf0270c235ce1df44e69
+    :git: https://github.com/harshil-gandhi-us/AppsOnAirIOSCore
 
 SPEC CHECKSUMS:
-  AppsOnAir: 6298ff43c34b669b9e46ae7167139d1975d99c15
+  AppsOnAir: ac0f87e6ad09ad66155607ba9db49dad9dfc2e72
+  AppsOnAirIOSCore: de93a0068e27ef5af1becba3914fcd98700ce2dd
+  ReachabilitySwift: 7f151ff156cea1481a8411701195ac6a984f4979
 
-PODFILE CHECKSUM: 6ac3b34c2fce1e38834288073fad2536a9c27a60
+PODFILE CHECKSUM: 02c95273b5de6d9984cd174bf2971fce7ab0740b
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.15.2

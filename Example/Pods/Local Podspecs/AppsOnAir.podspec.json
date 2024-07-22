@@ -1,6 +1,6 @@
 {
   "name": "AppsOnAir",
-  "version": "0.1.2",
+  "version": "0.1.5",
   "summary": "AppsOnAir is library for managing app updates and its maintenance.",
   "description": "AppsOnAir is library for managing app updates and its maintenance. It will handle from out web portal.",
   "homepage": "https://doc.dev.appsonair.com/Mobile-Quickstart/ios-sdk-setup",
@@ -9,19 +9,24 @@
     "file": "LICENSE"
   },
   "authors": {
-    "devtools-logicwind": "devtools@logicwind.com"
+    "harshil-gandhi-us": "devtools@logicwind.com"
   },
   "source": {
-    "git": "https://github.com/apps-on-air/AppsOnAir-iOS-SDK.git",
-    "tag": "0.1.2"
+    "git": "https://github.com/harshil-gandhi-us/AppsOnAirIOSCore.git",
+    "branch": "dev"
   },
   "platforms": {
-    "ios": "10.0"
+    "ios": "12.0"
   },
   "swift_versions": "5.0",
   "source_files": "AppsOnAirSDK/Classes/**/*",
   "resources": [
     "AppsOnAirSDK/Assets/AppUpdate.storyboard"
   ],
+  "dependencies": {
+    "AppsOnAirIOSCore": [
+
+    ]
+  },
   "swift_version": "5.0"
 }

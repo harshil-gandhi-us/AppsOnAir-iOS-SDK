@@ -8,13 +8,16 @@
 import Foundation
 import UIKit
 import AVFoundation
+import AppsOnAirIOSCore
 
 public class AppsOnAirServices : NSObject {
     private var appId: String = ""
     private var window: UIWindow?
-    
-    public func setAppId(_ appId: String,_ showNativeUI: Bool = false) -> (Void) {
-        self.appId = appId;
+    let appUpdateManager = AppsOnAirCoreServices()
+        
+    public func checkForAppUpdate(_ completion : @escaping (NSDictionary) -> (),_ showNativeUI: Bool = false) {
+        self.appId = appUpdateManager.getAppId();
+        print("appID \(self.appId)")
         if(showNativeUI) {
             AppUpdateRequest.fetchAppUpdate(self.appId) { (appUpdateData) in
                 let items = appUpdateData.count;
@@ -34,12 +37,11 @@ public class AppsOnAirServices : NSObject {
                     }
                 }
             }
+        }else {
+            AppUpdateRequest.fetchAppUpdate(self.appId) { (appUpdateData) in
+                completion(appUpdateData)
+            }
         }
-    }
-    
-    public func checkForAppUpdate(_ completion : @escaping (NSDictionary) -> ()) {
-        AppUpdateRequest.fetchAppUpdate(self.appId) { (appUpdateData) in
-            completion(appUpdateData)
-        }
+       
     }
 }

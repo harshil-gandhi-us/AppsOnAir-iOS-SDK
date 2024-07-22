@@ -1,9 +1,13 @@
 use_frameworks!
 
-platform :ios, '10.0'
+platform :ios, '12.0'
+  # source 'https://github.com/harshil-gandhi-us/AppsOnAirIOSCore.git'
+  # source 'https://github.com/CocoaPods/Specs.git'
 
 target 'AppsOnAirSDK_Example' do
   pod 'AppsOnAir', :path => '../'
+  pod 'AppsOnAirIOSCore', :git => 'https://github.com/harshil-gandhi-us/AppsOnAirIOSCore'
+
 
   target 'AppsOnAirSDK_Tests' do
     inherit! :search_paths

@@ -17,7 +17,7 @@ public class AppsOnAirServices : NSObject, NetworkServiceDelegate {
     var isShowNativeUI: Bool = false
     private var isCheckFetchUpdate:Bool = false
     
-    public func setAppId(_ appId: String,_ showNativeUI: Bool = false) -> (Void) {
+    @objc public func setAppId(_ appId: String,_ showNativeUI: Bool = false) -> (Void) {
         print("===> setAppId done")
         
         self.appId = appId;
@@ -77,7 +77,7 @@ public class AppsOnAirServices : NSObject, NetworkServiceDelegate {
     
     }
     
-    public func checkForAppUpdate(_ completion : @escaping (NSDictionary) -> ()) {
+    @objc public func checkForAppUpdate(_ completion : @escaping (NSDictionary) -> ()) {
         AppUpdateRequest.fetchAppUpdate(self.appId) { (appUpdateData) in
             completion(appUpdateData)
         }

@@ -38,7 +38,7 @@ class ReachabilityNetworkService: NetworkService {
         reachability.stopNotifier()
     }
 
-     private func networkChanged(_ notification: Notification) {
+    @objc private func networkChanged(_ notification: Notification) {
         guard let reachability = notification.object as? Reachability else { return }
 
         let isConnected = reachability.connection != .unavailable

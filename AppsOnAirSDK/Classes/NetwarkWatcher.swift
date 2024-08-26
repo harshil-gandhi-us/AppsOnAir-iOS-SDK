@@ -2,31 +2,31 @@ import Foundation
 import Reachability
 
 // Protocol to notify listeners about network state changes
-protocol NetworkServiceDelegate: AnyObject {
+@objc protocol NetworkServiceDelegate: AnyObject {
     func networkStatusDidChange(status: Bool)
 }
 
 // Protocol to define network service functionality
-protocol NetworkService {
+@objc protocol NetworkService {
     var delegate: NetworkServiceDelegate? { get set }
     func startMonitoring()
     func stopMonitoring()
 }
 
 // Implementation of network service using Reachability
-class ReachabilityNetworkService: NetworkService {
+@objc class ReachabilityNetworkService: NetworkService {
     private let reachability = try! Reachability()
     weak var delegate: NetworkServiceDelegate?
 
-    init() {
+   @objc init() {
         NotificationCenter.default.addObserver(self, selector: #selector(networkChanged(_:)), name: .reachabilityChanged, object: nil)
     }
 
-    deinit {
+    @objc deinit {
         NotificationCenter.default.removeObserver(self, name: .reachabilityChanged, object: nil)
     }
 
-    func startMonitoring() {
+    @objc func startMonitoring() {
         do {
             try reachability.startNotifier()
         } catch {
@@ -34,7 +34,7 @@ class ReachabilityNetworkService: NetworkService {
         }
     }
 
-    func stopMonitoring() {
+    @objc func stopMonitoring() {
         reachability.stopNotifier()
     }
 

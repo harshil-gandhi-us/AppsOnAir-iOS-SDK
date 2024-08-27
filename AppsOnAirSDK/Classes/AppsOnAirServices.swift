@@ -46,9 +46,8 @@ public class AppsOnAirServices : NSObject, NetworkServiceDelegate {
                     } else {
                         self.presentAppUpdate(appUpdateInfo: appUpdateInfo)
                     }
-                
+                    self.isCheckFetchUpdate = true
                 }
-                self.isCheckFetchUpdate = true
             }
         }
     }
